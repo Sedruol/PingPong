@@ -35,11 +35,11 @@ public class Ball : MonoBehaviour
     private IEnumerator ReLaunch()
     {
         yield return new WaitForSecondsRealtime(0.75f);
-        if (!resultPanel.activeSelf)
-        {
-            //Manager.Instance.Restart();
+        if (!resultPanel.activeSelf) Launch();
+        /*{
+            Manager.Instance.Restart();
             Launch();
-        }
+        }*/
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -30,7 +30,12 @@ public class Manager : MonoBehaviour
     public void ActivateResultPanel(int p)
     {
         resultPanel.SetActive(true);
-        TMP_Winner.text = "Player " + p.ToString() + " win";
+        if (PlayerPrefs.GetInt("BtnGameplaySelected", 0) == 0)
+        {
+            if (p == 1) TMP_Winner.text = "Player " + p.ToString() + " win";
+            else if (p == 2) TMP_Winner.text = "IA win";
+        }
+        else if (PlayerPrefs.GetInt("BtnGameplaySelected", 0) == 1) TMP_Winner.text = "Player " + p.ToString() + " win";
     }
     private IEnumerator SceneLoad(int n)
     {
@@ -58,9 +63,9 @@ public class Manager : MonoBehaviour
         {
             Time.timeScale = 0f;
             ActivateResultPanel(player);
-            Debug.Log("el ganador es el jugador " + player);
+            //Debug.Log("el ganador es el jugador " + player);
         }
-        else Restart();
+        Restart();
     }
     public void PaddleScore1()
     {
@@ -91,11 +96,5 @@ public class Manager : MonoBehaviour
         btnReload.onClick.AddListener(() => Reload());
         btnHome.onClick.AddListener(() => GoHome());
         btnExit.onClick.AddListener(() => Exit());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
