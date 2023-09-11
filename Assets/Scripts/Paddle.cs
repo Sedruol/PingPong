@@ -13,7 +13,7 @@ public class Paddle : MonoBehaviour
     void Update()
     {
         //float movement = Input.GetAxisRaw("Vertical");
-        movement = isPaddle1 ? Input.GetAxisRaw("Vertical") : Input.GetAxisRaw("Vertical2");
+        movement = isPaddle1 ? Input.GetAxisRaw("Vertical2") : Input.GetAxisRaw("Vertical");
         //transform.position += new Vector3(0, movement * speed * Time.deltaTime, 0);
         paddlePosition = transform.position;
         paddlePosition.y = Mathf.Clamp(paddlePosition.y + movement * speed * Time.deltaTime, -yBound, yBound);
