@@ -36,10 +36,6 @@ public class Ball : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.75f);
         if (!resultPanel.activeSelf) Launch();
-        /*{
-            Manager.Instance.Restart();
-            Launch();
-        }*/
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

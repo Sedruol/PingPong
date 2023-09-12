@@ -16,7 +16,6 @@ public class StartMenu : MonoBehaviour
     private int gameplaySelected = 0;
     private IEnumerator SceneLoad()
     {
-        //transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

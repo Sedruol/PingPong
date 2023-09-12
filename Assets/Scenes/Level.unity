@@ -931,6 +931,7 @@ GameObject:
   - component: {fileID: 1038726496}
   - component: {fileID: 1038726495}
   - component: {fileID: 1038726499}
+  - component: {fileID: 1038726500}
   m_Layer: 0
   m_Name: Paddle 1
   m_TagString: Paddle
@@ -1067,6 +1068,44 @@ MonoBehaviour:
   speed: 7
   isPaddle1: 1
   ball: {fileID: 1423872050}
+--- !u!114 &1038726500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038726494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 97e870c17e36524408f6f0c878659ddc, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 12353c48-b2cf-4566-baf3-f84c1586c27b
+    m_ActionName: Player1/Move1[/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a199a796-8788-449e-8d1d-c702a54d1381
+    m_ActionName: Player2/Move2[/Keyboard/upArrow,/Keyboard/downArrow]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player1
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1050355751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +1972,7 @@ GameObject:
   - component: {fileID: 1516534077}
   - component: {fileID: 1516534076}
   - component: {fileID: 1516534080}
+  - component: {fileID: 1516534081}
   m_Layer: 0
   m_Name: Paddle 2
   m_TagString: Paddle
@@ -2069,6 +2109,44 @@ MonoBehaviour:
   speed: 7
   isPaddle1: 0
   ball: {fileID: 1423872050}
+--- !u!114 &1516534081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516534075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 97e870c17e36524408f6f0c878659ddc, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 12353c48-b2cf-4566-baf3-f84c1586c27b
+    m_ActionName: Player1/Move1[/Keyboard/w,/Keyboard/s]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a199a796-8788-449e-8d1d-c702a54d1381
+    m_ActionName: Player2/Move2[/Keyboard/upArrow,/Keyboard/downArrow]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player2
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1755445609
 GameObject:
   m_ObjectHideFlags: 0

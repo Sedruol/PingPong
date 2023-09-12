@@ -39,7 +39,6 @@ public class Manager : MonoBehaviour
     }
     private IEnumerator SceneLoad(int n)
     {
-        //transitionAnimator.SetTrigger("StartTransition");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(currentScene + n);
     }
@@ -63,7 +62,6 @@ public class Manager : MonoBehaviour
         {
             Time.timeScale = 0f;
             ActivateResultPanel(player);
-            //Debug.Log("el ganador es el jugador " + player);
         }
         Restart();
     }
