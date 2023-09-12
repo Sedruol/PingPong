@@ -15,6 +15,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private Button btnReload;
     [SerializeField] private Button btnHome;
     [SerializeField] private Button btnExit;
+    [SerializeField] private Canvas canvas;
     private int score1 = 0;
     private int score2 = 0;
     private int currentScene = 0;
@@ -39,6 +40,8 @@ public class Manager : MonoBehaviour
     }
     private IEnumerator SceneLoad(int n)
     {
+        canvas.gameObject.SetActive(true);
+        StartCoroutine(LoadScene.Instance.ChangeScene());
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(currentScene + n);
     }

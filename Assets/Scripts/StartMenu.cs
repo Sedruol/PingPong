@@ -10,12 +10,15 @@ public class StartMenu : MonoBehaviour
     [SerializeField] private List<Button> ListBtnMaxScore = new List<Button>();
     [SerializeField] private List<Button> ListBtnGameplay = new List<Button>();
     [SerializeField] private Color selectedColor;
+    [SerializeField] private Canvas canvas;
     private int[] maxValues = { 3, 5, 7, 10, 12, 15, 17, 20 };
     private int maxPosSelected = 0;
     private int maxValueSelected = 0;
     private int gameplaySelected = 0;
     private IEnumerator SceneLoad()
     {
+        canvas.gameObject.SetActive(true);
+        StartCoroutine(LoadScene.Instance.ChangeScene());
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }

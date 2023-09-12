@@ -34,7 +34,7 @@ public class Ball : MonoBehaviour
     }
     private IEnumerator ReLaunch()
     {
-        yield return new WaitForSecondsRealtime(0.75f);
+        yield return new WaitForSecondsRealtime(1f);//0.75f
         if (!resultPanel.activeSelf) Launch();
     }
     private void OnTriggerEnter2D(Collider2D collision)
