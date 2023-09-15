@@ -59,8 +59,9 @@ public class Manager : MonoBehaviour
     {
         Application.Quit();
     }
-    private void PaddleWin(int score, int player)
+    private IEnumerator ValidateResult(int score, int player)
     {
+        yield return new WaitForSeconds(1f);
         if (score == PlayerPrefs.GetInt("BtnMaxValueSelected", 0))
         {
             Time.timeScale = 0f;
@@ -72,15 +73,15 @@ public class Manager : MonoBehaviour
     {
         score1++;
         TMPScore1.text = score1.ToString();
-        PaddleWin(score1, 1);
+        StartCoroutine(ValidateResult(score1, 1));
     }
     public void PaddleScore2()
     {
         score2++;
         TMPScore2.text = score2.ToString();
-        PaddleWin(score2, 2);
+        StartCoroutine(ValidateResult(score2, 2));
     }
-    public void Restart()
+    private void Restart()
     {
         paddle1.position = new Vector2(paddle1.position.x, 0);
         paddle2.position = new Vector2(paddle2.position.x, 0);

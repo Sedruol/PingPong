@@ -1771,6 +1771,7 @@ MonoBehaviour:
   resultPanel: {fileID: 192579364}
   velocity: 4
   velocityMultiplier: 1.1
+  particles: {fileID: 7361024760695908482, guid: b72e63646a43ca647b709c29541443c9, type: 3}
 --- !u!1 &1440434162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2377,10 +2378,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9181119384988826986, guid: 1460a3785413f0b4d9fc58617ecdda6c, type: 3}
-      propertyPath: speed
-      value: 1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 9181119384988826993, guid: 1460a3785413f0b4d9fc58617ecdda6c, type: 3}
       propertyPath: m_Name
       value: Canvas

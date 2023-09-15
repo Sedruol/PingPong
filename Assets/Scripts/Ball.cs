@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private GameObject resultPanel;
     [SerializeField] private float velocity = 4f;
     [SerializeField] private float velocityMultiplier = 1.1f;
+    [SerializeField] private GameObject particles;
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     // Start is called before the first frame update
@@ -34,11 +35,12 @@ public class Ball : MonoBehaviour
     }
     private IEnumerator ReLaunch()
     {
-        yield return new WaitForSecondsRealtime(1f);//0.75f
+        yield return new WaitForSecondsRealtime(1.5f);//0.75f
         if (!resultPanel.activeSelf) Launch();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Instantiate(particles, transform.position, Quaternion.identity);
         if (collision.gameObject.CompareTag("Goal1")) Manager.Instance.PaddleScore1();
         else if (collision.gameObject.CompareTag("Goal2")) Manager.Instance.PaddleScore2();
         sr.enabled = false;

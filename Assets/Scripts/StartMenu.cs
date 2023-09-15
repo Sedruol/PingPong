@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     [SerializeField] private Button btnPlay;
+    [SerializeField] private Button btnExit;
     [SerializeField] private List<Button> ListBtnMaxScore = new List<Button>();
     [SerializeField] private List<Button> ListBtnGameplay = new List<Button>();
     [SerializeField] private Color selectedColor;
@@ -29,6 +30,7 @@ public class StartMenu : MonoBehaviour
         maxValueSelected = PlayerPrefs.GetInt("BtnMaxValueSelected", 3);
         gameplaySelected = PlayerPrefs.GetInt("BtnGameplaySelected", 0);
         btnPlay.onClick.AddListener(() => StartGame());
+        btnExit.onClick.AddListener(() => ExitGame());
         for (int i = 0; i < ListBtnMaxScore.Count; i++)
         {
             int iCopy = i;
@@ -41,6 +43,10 @@ public class StartMenu : MonoBehaviour
             ListBtnGameplay[j].image.color = j == gameplaySelected ? selectedColor : Color.white;
             ListBtnGameplay[j].onClick.AddListener(() => ChangeBtnGameplay(jCopy));
         }
+    }
+    private void ExitGame()
+    {
+        Application.Quit();
     }
     private void ChangeBtnGameplay(int pos)
     {
